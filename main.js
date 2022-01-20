@@ -62,4 +62,4 @@ client.on('message', message =>{
 
 
 // LAST LINE; logging in with token
-client.login('OTMyNzE5NTY3MzcxOTI3NjMy.YeXEyQ.ikOFpLW3EprhmZIR6Hva0RbU9Mg');
+client.login('OTMyNzE5NTY3MzcxOTI3NjMy.YeXEyQ.4Axqx8KHqsVCGTHbqeOJT1oDAEs');
