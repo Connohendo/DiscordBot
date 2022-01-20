@@ -31,9 +31,12 @@ client.on('message', message =>{
     // if message doesnt have prefix or is by the bot ignore
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
-    // splice the message to check for prefix
+    // splice the message to grab the command without the prefix
     const args = message.content.slice(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
+
+    // test to see the commands being passed
+    //message.channel.send(command.substring(0,4));
 
     // ping command calling the file and executing it
     if(command === 'ping'){
@@ -47,6 +50,14 @@ client.on('message', message =>{
     else if(command === 'getdabois'){
         client.commands.get('getdabois').execute(message, args);
     }
+    else if(command === 'perms'){
+        client.commands.get('perms').execute(message, args);
+    }
+    else if(command === 'roll20'){
+        client.commands.get('roll20').execute(message, args);
+    }
+    else if(command.substring(0,4) === 'roll')
+        client.commands.get('roll').execute(message, args);
 })
 
 
