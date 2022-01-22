@@ -56,10 +56,17 @@ client.on('message', message =>{
     else if(command === 'roll20'){
         client.commands.get('roll20').execute(message, args);
     }
-    else if(command.substring(0,4) === 'roll')
+    else if(command.substring(0,4) === 'roll'){
         client.commands.get('roll').execute(message, args);
+    }
+    else if(command === 'play'){
+        client.commands.get('play').execute(message, args);
+    }
+    else if(command === 'leave'){
+        client.commands.get('leave').execute(message, args);
+    }
 })
 
 
 // LAST LINE; logging in with token
-client.login('OTMyNzE5NTY3MzcxOTI3NjMy.YeXEyQ.4Axqx8KHqsVCGTHbqeOJT1oDAEs');
+client.login('OTMyNzE5NTY3MzcxOTI3NjMy.YeXEyQ.MwLeXZ4HmQLKWyjK7JTxRxSIiqk');
