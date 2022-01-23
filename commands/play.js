@@ -36,6 +36,7 @@ module.exports = {
                     voiceChannnel.leave();
                 });
                 await message.reply(`:Thumbsup: Now Playing ***${video.title}***`)
+                return
             }
 
 
