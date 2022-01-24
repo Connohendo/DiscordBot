@@ -14,7 +14,7 @@ module.exports = {
             if(!args.length) return message.channel.send('You need to request a yt link');
 
             const validURL = (str) => {
-                var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/[\w#!:.?+=&%!\-\/]))?/;
+                var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
                 if(!regex.test(str)){
                     return false;
                 }
@@ -26,7 +26,6 @@ module.exports = {
             }
 
             if(validURL(args[0])){
-                message.channel.send('You entered a correct url');
 
                 const connection = await voiceChannnel.join();
                 const stream = ytdl(args[0], {filter: 'audioonly'});
@@ -35,7 +34,7 @@ module.exports = {
                 .on('finish', () =>{
                     voiceChannnel.leave();
                 });
-                await message.reply(`:Thumbsup: Now Playing ***${video.title}***`)
+                await message.reply(`:Thumbsup: Now Playing ***${stream.title}***`)
                 return
             }
 
