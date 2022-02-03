@@ -50,6 +50,9 @@ client.on('message', message =>{
     else if(command === 'getdabois'){
         client.commands.get('getdabois').execute(message, args);
     }
+    else if(command === 'scry'){
+        client.commands.get('scry').execute(message, args);
+    }
     else if(command === 'perms'){
         client.commands.get('perms').execute(message, args);
     }
