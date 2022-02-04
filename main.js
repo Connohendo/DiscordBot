@@ -50,21 +50,27 @@ client.on('message', message =>{
     else if(command === 'getdabois'){
         client.commands.get('getdabois').execute(message, args);
     }
+    // command for scry
     else if(command === 'scry'){
         client.commands.get('scry').execute(message, args);
     }
+    // command to test permission requirements
     else if(command === 'perms'){
         client.commands.get('perms').execute(message, args);
     }
+    // rolls a single d20
     else if(command === 'roll20'){
         client.commands.get('roll20').execute(message, args);
     }
+    // custom roll command
     else if(command.substring(0,4) === 'roll'){
         client.commands.get('roll').execute(message, args);
     }
+    // play command for music bot functionality
     else if(command === 'play'){
         client.commands.get('play').execute(message, args);
     }
+    // leave command to shut the bot up
     else if(command === 'leave'){
         client.commands.get('leave').execute(message, args);
     }
