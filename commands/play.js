@@ -58,7 +58,7 @@ module.exports = {
                 .on('finish', () => {
                     voiceChannnel.leave();
                 });
-                await message.reply(`:Thumbsup: Now Playing ***${video.title}***`)
+                await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
             }
             else{
                 message.channel.send('No result found');
